@@ -28,7 +28,7 @@ import FixedPlugin from "components/FixedPlugin/FixedPlugin.js";
 
 import routes from "routes.js";
 
-import logo from "assets/img/react-logo.png";
+import logo from "assets/img/logo.jpg";
 
 var ps;
 
@@ -116,7 +116,7 @@ class App extends React.Component {
             routes={routes}
             bgColor={this.state.backgroundColor}
             logo={{
-              outterLink: "https://www.creative-tim.com/",
+              outterLink: "https://medisureai.live/",
               text: "Medisure.ai",
               imgSrc: logo,
             }}

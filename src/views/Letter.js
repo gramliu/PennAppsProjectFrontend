@@ -35,8 +35,7 @@ import {
 import axios from "axios";
 import FormData from "form-data";
 
-// const URL = "http://localhost:5000/denial";
-const URL = "https://backend-nlstr4buia-uc.a.run.app/denial";
+const URL = `${process.env.REACT_APP_HOST_NAME}/denial`;
 
 class Letter extends React.Component {
   constructor(props) {
@@ -143,14 +142,13 @@ class Letter extends React.Component {
                 <Card>
                   <CardHeader>
                     <CardTitle tag='h3'>
-                      <i className='tim-icons icon-double-right text-success' />
                       Information
                     </CardTitle>
                   </CardHeader>
-                  <CardBody>
+                  <CardBody >
                     <Form onSubmit={this.inputSubmit.bind(this)}>
                       <FormGroup row>
-                        <Label for='srcFile' tag='h4' lg={labelSize}>
+                        <Label for='srcFile' tag='h5' lg={labelSize}>
                           Upload denial letter
                         </Label>
                         <Col lg={6}>
@@ -453,7 +451,6 @@ class Letter extends React.Component {
                   <CardHeader>
                     <Row>
                       <CardTitle tag='h3' className='ml-3'>
-                        <i className='tim-icons icon-double-right text-primary' />
                         Denial Appeal Letter
                       </CardTitle>
                       {this.state.formLoading ? (
